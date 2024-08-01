@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+    <title>Home Page</title>
+  </head>
+  <body>
+    <%- include("./partials/nav") %>
+    <form
+      class="container"
+      method="post"
+      action="/blog/"
+      enctype="multipart/form-data"
+    >
+      <div class="mt-4 form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Enter the title"
+          id="title"
+          name="title"
+        ></textarea>
+        <label for="title">Title</label>
+      </div>
+      <div class="mt-4 form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Enter the body"
+          id="body"
+          name="body"
+          style="height: 150px"
+        ></textarea>
+        <label for="body">Body</label>
+      </div>
+      <div class="mb-3">
+        <input class="form-control" type="file" id="coverImage" name="coverImage" />
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Submit</button>
+    </form>
+    <%- include("./partials/scripts") %>
+  </body>
+</html>
